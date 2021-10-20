@@ -1,0 +1,11 @@
+default_context:
+    municipality: "Self"
+    municipality_slug: "self"
+    python_municipality_slug: "self"
+    infrastructure_slug: "cdp-self-chjtigrp"
+    maintainer_or_org_full_name: "Council Data Project Contributors"
+    hosting_github_username_or_org: "CouncilDataProject"
+    hosting_github_repo_name: "self"
+    hosting_github_url: "https://github.com/CouncilDataProject/self"
+    hosting_web_app_address: "https://CouncilDataProject.github.io/self"
+    firestore_region: "us-central"
