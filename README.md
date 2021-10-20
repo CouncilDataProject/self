@@ -16,56 +16,9 @@ For more information about Council Data Project, please visit [our website](http
 
 ## Instance Information
 
-This repo serves the municipality: **Self**
+This instance serves as a public archive for CDP team meetings.
 
-### Python Access
-
-Install:
-
-`pip install cdp-backend`
-
-Quickstart:
-
-```python
-from cdp_backend.database import models as db_models
-from cdp_backend.pipeline.transcript_model import Transcript
-import fireo
-from gcsfs import GCSFileSystem
-from google.auth.credentials import AnonymousCredentials
-from google.cloud.firestore import Client
-
-# Connect to the database
-fireo.connection(client=Client(
-    project="cdp-self-chjtigrp",
-    credentials=AnonymousCredentials()
-))
-
-# Read from the database
-five_people = list(db_models.Person.collection.fetch(5))
-
-# Connect to the file store
-fs = GCSFileSystem(project="cdp-self-chjtigrp", token="anon")
-
-# Read a transcript's details from the database
-transcript_model = list(db_models.Transcript.collection.fetch(1))[0]
-
-# Read the transcript directly from the file store
-with fs.open(transcript_model.file_ref.get().uri, "r") as open_resource:
-    transcript = Transcript.from_json(open_resource.read())
-
-# OR download and store the transcript locally with `get`
-fs.get(transcript_model.file_ref.get().uri, "local-transcript.json")
-# Then read the transcript from your local machine
-with open("local-transcript.json", "r") as open_resource:
-    transcript = Transcript.from_json(open_resource.read())
-```
-
--   See the [CDP Database Schema](https://councildataproject.org/cdp-backend/database_schema.html)
-    for a Council Data Project database schema diagram.
--   See the [FireO documentation](https://octabyte.io/FireO/)
-    to learn how to construct queries using CDP database models.
--   See the [GCSFS documentation](https://gcsfs.readthedocs.io/en/latest/index.html)
-    to learn how to retrieve files from the file store.
+_While we will try to upload all of our meetings, we may forget sometimes!_
 
 ## Contributing
 
