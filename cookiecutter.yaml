@@ -1,5 +1,6 @@
 default_context:
     municipality: "Self"
+    governing_body_type: "other"
     municipality_slug: "self"
     python_municipality_slug: "self"
     infrastructure_slug: "cdp-self-chjtigrp"
