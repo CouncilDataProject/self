@@ -1,2 +1,0 @@
-(this["webpackJsonpcdp-self"]=this["webpackJsonpcdp-self"]||[]).push([[0],{195:function(e,i){},82:function(e,i,n){"use strict";n.r(i);n(0);var t=n(25),s=n.n(t),c=n(57),p=(n(208),n(48));s.a.render(Object(p.jsx)("div",{children:Object(p.jsx)(c.AppConfigProvider,{appConfig:{firebaseConfig:{options:{projectId:"cdp-self-chjtigrp"},settings:{}},municipality:{name:"Self",footerLinksSections:[]}},children:Object(p.jsx)(c.App,{})})}),document.getElementById("root"))}},[[82,1,2]]]);
-//# sourceMappingURL=main.4c1526da.chunk.js.map
